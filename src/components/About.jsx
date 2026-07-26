@@ -59,7 +59,7 @@ export default function About() {
                 </div>
                 <div>
                   <span className="text-xs text-slate-500 dark:text-slate-400 uppercase font-semibold">Email</span>
-                  <a href="mailto:bhupendernadal@gmail.com" className="text-sm font-medium text-slate-800 dark:text-slate-200 hover:text-blue-600 dark:hover:text-cyan-400 transition-colors">
+                  <a href="mailto:bhupendernadal@gmail.com" className="block text-sm font-medium text-slate-800 dark:text-slate-200 hover:text-blue-600 dark:hover:text-cyan-400 transition-colors">
                     bhupendernadal@gmail.com
                   </a>
                 </div>
@@ -71,7 +71,7 @@ export default function About() {
                 </div>
                 <div>
                   <span className="text-xs text-slate-500 dark:text-slate-400 uppercase font-semibold">Phone</span>
-                  <a href="tel:+919015381011" className="text-sm font-medium text-slate-800 dark:text-slate-200 hover:text-blue-600 dark:hover:text-cyan-400 transition-colors">
+                  <a href="tel:+919015381011" className="block text-sm font-medium text-slate-800 dark:text-slate-200 hover:text-blue-600 dark:hover:text-cyan-400 transition-colors">
                     +91 9015381011
                   </a>
                 </div>

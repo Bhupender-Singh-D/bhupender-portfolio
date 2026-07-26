@@ -1,19 +1,20 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import { useForm, ValidationError } from '@formspree/react';
 import confetti from 'canvas-confetti';
 import { Mail, Phone, MapPin, Send, Copy, Check, Linkedin, Github, Instagram, ExternalLink, MessageSquare } from 'lucide-react';
 
-export default function Contact() {
-  const [formData, setFormData] = useState({
-    fullName: '',
-    email: '',
-    phone: '',
-    subject: '',
-    message: ''
-  });
+const initialFormData = {
+  fullName: '',
+  email: '',
+  phone: '',
+  subject: '',
+  message: ''
+};
 
+export default function Contact() {
+  const [state, handleSubmit] = useForm('mjkwyrvb');
+  const [formData, setFormData] = useState(initialFormData);
   const [errors, setErrors] = useState({});
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submittedSuccess, setSubmittedSuccess] = useState(false);
   const [copiedField, setCopiedField] = useState('');
 
   const handleInputChange = (e) => {
@@ -36,7 +37,7 @@ export default function Contact() {
     return newErrors;
   };
 
-  const handleSubmit = (e) => {
+  const handleFormSubmit = (e) => {
     e.preventDefault();
     const validationErrors = validateForm();
     if (Object.keys(validationErrors).length > 0) {
@@ -44,30 +45,21 @@ export default function Contact() {
       return;
     }
 
-    setIsSubmitting(true);
+    setErrors({});
+    handleSubmit(e);
+  };
 
-    // Simulate submission delay
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setSubmittedSuccess(true);
-
-      // Trigger Confetti Celebration
+  useEffect(() => {
+    if (state.succeeded) {
       confetti({
         particleCount: 100,
         spread: 70,
         origin: { y: 0.6 }
       });
-
-      // Reset form after delay
-      setFormData({
-        fullName: '',
-        email: '',
-        phone: '',
-        subject: '',
-        message: ''
-      });
-    }, 800);
-  };
+      setFormData(initialFormData);
+      setErrors({});
+    }
+  }, [state.succeeded]);
 
   const handleCopy = (text, fieldName) => {
     navigator.clipboard.writeText(text);
@@ -236,7 +228,7 @@ export default function Contact() {
                 Send a Message
               </h3>
 
-              {submittedSuccess && (
+              {state.succeeded && (
                 <div className="p-4 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-700 dark:text-emerald-400 text-sm font-semibold flex items-center gap-3 animate-in fade-in">
                   <Check className="w-5 h-5 text-emerald-500 shrink-0" />
                   <div>
@@ -246,7 +238,7 @@ export default function Contact() {
                 </div>
               )}
 
-              <form onSubmit={handleSubmit} className="space-y-4">
+              <form onSubmit={handleFormSubmit} className="space-y-4">
 
                 {/* Row 1: Full Name & Email */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -255,6 +247,7 @@ export default function Contact() {
                       Full Name <span className="text-rose-500">*</span>
                     </label>
                     <input
+                      id="fullName"
                       type="text"
                       name="fullName"
                       value={formData.fullName}
@@ -271,6 +264,7 @@ export default function Contact() {
                       Email Address <span className="text-rose-500">*</span>
                     </label>
                     <input
+                      id="email"
                       type="email"
                       name="email"
                       value={formData.email}
@@ -280,6 +274,7 @@ export default function Contact() {
                         } text-slate-900 dark:text-white text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all`}
                     />
                     {errors.email && <p className="text-xs text-rose-500">{errors.email}</p>}
+                    <ValidationError prefix="Email" field="email" errors={state.errors} />
                   </div>
                 </div>
 
@@ -290,6 +285,7 @@ export default function Contact() {
                       Phone Number
                     </label>
                     <input
+                      id="phone"
                       type="tel"
                       name="phone"
                       value={formData.phone}
@@ -304,6 +300,7 @@ export default function Contact() {
                       Subject
                     </label>
                     <input
+                      id="subject"
                       type="text"
                       name="subject"
                       value={formData.subject}
@@ -320,6 +317,7 @@ export default function Contact() {
                     Message <span className="text-rose-500">*</span>
                   </label>
                   <textarea
+                    id="message"
                     name="message"
                     rows="5"
                     value={formData.message}
@@ -329,15 +327,16 @@ export default function Contact() {
                       } text-slate-900 dark:text-white text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all`}
                   ></textarea>
                   {errors.message && <p className="text-xs text-rose-500">{errors.message}</p>}
+                  <ValidationError prefix="Message" field="message" errors={state.errors} />
                 </div>
 
                 {/* Submit Button */}
                 <button
                   type="submit"
-                  disabled={isSubmitting}
-                  className="w-full py-4 px-6 rounded-xl font-bold text-white bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 shadow-lg hover:shadow-blue-500/25 hover:opacity-95 active:scale-[0.99] transition-all flex items-center justify-center gap-2"
+                  disabled={state.submitting}
+                  className="w-full py-4 px-6 rounded-xl font-bold text-white bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 shadow-lg hover:shadow-blue-500/25 hover:opacity-95 active:scale-[0.99] transition-all flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed"
                 >
-                  {isSubmitting ? (
+                  {state.submitting ? (
                     <span className="animate-spin border-2 border-white border-t-transparent rounded-full w-5 h-5"></span>
                   ) : (
                     <>

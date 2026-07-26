@@ -33,6 +33,8 @@ export default function Contact() {
     } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
       newErrors.email = 'Please enter a valid email address';
     }
+    if (!formData.phone.trim()) newErrors.phone = 'Phone number is required';
+    if (!formData.subject.trim()) newErrors.subject = 'Subject is required';
     if (!formData.message.trim()) newErrors.message = 'Message cannot be empty';
     return newErrors;
   };
@@ -291,8 +293,9 @@ export default function Contact() {
                       value={formData.phone}
                       onChange={handleInputChange}
                       placeholder="+91 9876543210"
-                      className="w-full px-4 py-3 rounded-xl bg-slate-100/80 dark:bg-slate-900/80 border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all"
+                      className={`w-full px-4 py-3 rounded-xl bg-slate-100/80 dark:bg-slate-900/80 border ${errors.phone ? 'border-rose-500' : 'border-slate-300 dark:border-slate-700'} text-slate-900 dark:text-white text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all`}
                     />
+                    {errors.phone && <p className="text-xs text-rose-500">{errors.phone}</p>}
                   </div>
 
                   <div className="space-y-1.5">
@@ -306,8 +309,9 @@ export default function Contact() {
                       value={formData.subject}
                       onChange={handleInputChange}
                       placeholder="Website Project Inquiry"
-                      className="w-full px-4 py-3 rounded-xl bg-slate-100/80 dark:bg-slate-900/80 border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all"
+                      className={`w-full px-4 py-3 rounded-xl bg-slate-100/80 dark:bg-slate-900/80 border ${errors.subject ? 'border-rose-500' : 'border-slate-300 dark:border-slate-700'} text-slate-900 dark:text-white text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all`}
                     />
+                    {errors.subject && <p className="text-xs text-rose-500">{errors.subject}</p>}
                   </div>
                 </div>
 

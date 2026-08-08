@@ -12,6 +12,29 @@ const responsibilities = [
   "Collaborated directly with clients, UI designers, and backend engineering teams."
 ];
 
+const experienceEntries = [
+  {
+    company: 'Kindlebit Solutions Pvt. Ltd.',
+    role: 'Web Designer / Frontend Developer',
+    period: '16 September 2024 – Present',
+    description: 'Worked on modern client-facing web experiences, translating design requirements into polished responsive front-end interfaces with a strong focus on usability and performance.',
+    highlights: [
+      'Built responsive interfaces with React, Tailwind CSS, and clean semantic HTML/CSS.',
+      'Collaborated with teams to deliver visually consistent and user-friendly web solutions.'
+    ]
+  },
+  {
+    company: 'Finesin Tech Pvt. Ltd.',
+    role: 'Web Designer',
+    period: '19 October 2023 – 05 June 2024',
+    description: 'Developed and maintained website layouts and front-end components for business and marketing projects while improving responsiveness and overall user experience.',
+    highlights: [
+      'Converted UI designs into pixel-perfect pages and reusable front-end components.',
+      'Improved website performance and responsiveness across devices and browsers.'
+    ]
+  }
+];
+
 export default function Experience() {
   return (
     <section id="experience" className="py-20 relative overflow-hidden">
@@ -76,6 +99,32 @@ export default function Experience() {
                   </div>
                 ))}
               </div>
+            </div>
+
+            <div className="mt-8 space-y-4">
+              {experienceEntries.map((item, idx) => (
+                <div key={idx} className="rounded-2xl border border-slate-200/70 dark:border-slate-800/80 bg-white/60 dark:bg-slate-900/40 p-5 shadow-sm">
+                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+                    <div>
+                      <h5 className="text-lg font-display font-semibold text-slate-900 dark:text-white">{item.company}</h5>
+                      <p className="text-sm font-medium text-blue-600 dark:text-cyan-400">{item.role}</p>
+                    </div>
+                    <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-100 dark:bg-slate-800 text-xs font-semibold text-slate-600 dark:text-slate-300">
+                      <Calendar className="w-3.5 h-3.5" />
+                      <span>{item.period}</span>
+                    </div>
+                  </div>
+                  <p className="mt-3 text-sm text-slate-600 dark:text-slate-300 leading-relaxed">{item.description}</p>
+                  <ul className="mt-3 space-y-2">
+                    {item.highlights.map((highlight, highlightIdx) => (
+                      <li key={highlightIdx} className="flex items-start gap-2 text-sm text-slate-700 dark:text-slate-300">
+                        <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" />
+                        <span>{highlight}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
             </div>
 
             {/* Daily Tech Stack Tags */}

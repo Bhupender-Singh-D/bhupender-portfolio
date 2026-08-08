@@ -93,26 +93,44 @@ export default function ResumeModal({ isOpen, onClose }) {
               Professional Experience
             </h3>
 
-            <div className="space-y-2">
-              <div className="flex justify-between items-start">
-                <div>
-                  <h4 className="font-bold text-base text-slate-900 dark:text-white">
-                    Web Designer & Front-End Developer
-                  </h4>
-                  <p className="text-xs text-slate-500">IT Solutions & Development Agencies | Mohali, India</p>
+            <div className="space-y-4">
+              <div className="rounded-xl border border-slate-200 dark:border-slate-800 p-4">
+                <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-1">
+                  <div>
+                    <h4 className="font-bold text-base text-slate-900 dark:text-white">
+                      Web Designer / Frontend Developer
+                    </h4>
+                    <p className="text-xs text-slate-500">Kindlebit Solutions Pvt. Ltd. | Mohali, India</p>
+                  </div>
+                  <span className="text-xs font-semibold px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-800">
+                    16 Sep 2024 – Present
+                  </span>
                 </div>
-                <span className="text-xs font-semibold px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-800">
-                  2023 - Present (2.5+ Yrs)
-                </span>
+                <ul className="space-y-1.5 text-xs sm:text-sm list-disc list-inside text-slate-600 dark:text-slate-300 pt-3">
+                  <li>Delivered modern, responsive client-facing web experiences with polished front-end implementation.</li>
+                  <li>Built reusable interfaces using React.js, Tailwind CSS, and clean semantic HTML/CSS.</li>
+                  <li>Translated UI requirements into user-friendly, high-quality digital products.</li>
+                </ul>
               </div>
 
-              <ul className="space-y-1.5 text-xs sm:text-sm list-disc list-inside text-slate-600 dark:text-slate-300 pt-2">
-                <li>Developed pixel-perfect, responsive web interfaces from Figma and PSD designs.</li>
-                <li>Engineered reusable UI components in React.js and Tailwind CSS.</li>
-                <li>Customized client WordPress & WooCommerce portals with tailored CSS and Elementor.</li>
-                <li>Optimized page performance, image compression, lazy loading, and cross-browser support.</li>
-                <li>Worked directly with stakeholders and engineering leads to launch 50+ successful projects.</li>
-              </ul>
+              <div className="rounded-xl border border-slate-200 dark:border-slate-800 p-4">
+                <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-1">
+                  <div>
+                    <h4 className="font-bold text-base text-slate-900 dark:text-white">
+                      Web Designer
+                    </h4>
+                    <p className="text-xs text-slate-500">Finesin Tech Pvt. Ltd. | Mohali, India</p>
+                  </div>
+                  <span className="text-xs font-semibold px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-800">
+                    19 Oct 2023 – 05 Jun 2024
+                  </span>
+                </div>
+                <ul className="space-y-1.5 text-xs sm:text-sm list-disc list-inside text-slate-600 dark:text-slate-300 pt-3">
+                  <li>Developed pixel-perfect, responsive web interfaces from Figma and PSD designs.</li>
+                  <li>Engineered reusable UI components and improved overall website usability.</li>
+                  <li>Enhanced responsiveness and performance across devices and browsers.</li>
+                </ul>
+              </div>
             </div>
           </div>
 

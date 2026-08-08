@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ArrowRight, Download, Send, Sparkles, CheckCircle2, Code, Layers, Smartphone } from 'lucide-react';
-
+import ProfileImage from '../assets/images/profile.webp';
 const roles = [
   "Web Designer & Front-End Developer",
   "React.js Specialist",
@@ -153,10 +153,8 @@ export default function Hero({ onOpenResume }) {
 
                 {/* Avatar / Developer Graphic Illustration */}
                 <div className="relative my-4 flex-1 flex flex-col items-center justify-center bg-gradient-to-b from-blue-500/10 to-purple-500/10 rounded-2xl p-6 border border-slate-200/50 dark:border-slate-800/50">
-                  <div className="relative w-28 h-28 sm:w-32 sm:h-32 rounded-full bg-gradient-to-tr from-blue-600 to-purple-600 p-1 shadow-xl mb-4 group-hover:scale-105 transition-transform duration-300">
-                    <div className="w-full h-full rounded-full bg-slate-900 flex items-center justify-center text-4xl font-bold text-white tracking-widest font-display">
-                      BS
-                    </div>
+                  <div className="relative w-28 h-28 sm:w-40 sm:h-40 rounded-full bg-gradient-to-tr from-blue-600 to-purple-600 p-1 shadow-xl mb-4 group-hover:scale-105 transition-transform duration-300">
+                    <img src={ProfileImage} alt="Bhupender Singh" className="w-full h-full rounded-full object-cover" />
                     {/* Active Status Badge */}
                     <div className="absolute bottom-1 right-1 w-6 h-6 rounded-full bg-emerald-500 border-2 border-slate-900 flex items-center justify-center">
                       <span className="w-2 h-2 rounded-full bg-white animate-ping"></span>
@@ -184,7 +182,7 @@ export default function Hero({ onOpenResume }) {
                 </div>
 
                 {/* Floating Badges */}
-                <div className="absolute -top-3 -right-3 px-3.5 py-2 rounded-2xl glass-card border border-purple-500/30 text-xs font-semibold flex items-center gap-2 shadow-lg animate-float">
+                <div className="absolute -top-2 -right-3 px-3.5 py-2 rounded-2xl glass-card border border-purple-500/30 text-xs font-semibold flex items-center gap-2 shadow-lg animate-float">
                   <Code className="w-4 h-4 text-purple-500" />
                   <span className="text-slate-800 dark:text-slate-200">2.5+ Yrs Exp</span>
                 </div>

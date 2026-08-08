@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { ExternalLink, Github, Eye, Layers, Filter, X, Check } from 'lucide-react';
+import Portfolioimage1 from '../assets/images/portfolio2.png';
 
 const projectsData = [
   {
@@ -19,7 +20,7 @@ const projectsData = [
     category: 'React.js',
     tech: ['React.js', 'Tailwind CSS', 'Lucide Icons'],
     desc: 'Luxury hotel & resort reservation web application featuring room filter systems, date pickers, virtual tour galleries, and instant booking confirmation UI.',
-    imageBg: 'from-cyan-600 to-blue-800',
+    imageBg: Portfolioimage1,
     demoUrl: 'https://example.com/hotel-booking-demo',
     githubUrl: 'https://github.com/bhupendersingh/hotel-booking-react',
     highlights: ['Interactive room selection', 'Date range picker', 'Responsive modal checkout', 'Figma to React conversion']
@@ -163,12 +164,19 @@ export default function Portfolio() {
         {/* Portfolio Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredProjects.map((project) => (
+            (() => {
+            const isGradientBg = typeof project.imageBg === 'string' && /from-|to-/.test(project.imageBg);
+            const isImageBg = !isGradientBg;
+            const bgClass = isImageBg ? 'bg-cover bg-center' : `bg-gradient-to-br ${project.imageBg}`;
+            const bgStyle = isImageBg ? { backgroundImage: `url(${project.imageBg})` } : undefined;
+
+            return (
             <div
               key={project.id}
               className="glass-card rounded-3xl overflow-hidden border border-slate-200/80 dark:border-slate-800 flex flex-col justify-between group hover:-translate-y-2 transition-all duration-300 shadow-xl"
             >
               {/* Graphic Mockup Preview Image Header */}
-              <div className={`h-52 bg-gradient-to-br ${project.imageBg} relative p-6 flex flex-col justify-between overflow-hidden group-hover:scale-105 transition-transform duration-500`}>
+              <div className={`h-52 ${bgClass} relative p-6 flex flex-col justify-between overflow-hidden group-hover:scale-105 transition-transform duration-500`} style={bgStyle}>
                 
                 {/* Floating Category Badge */}
                 <div className="flex justify-between items-center z-10">
@@ -237,6 +245,8 @@ export default function Portfolio() {
                 </div>
               </div>
             </div>
+            );
+            })()
           ))}
         </div>
 
@@ -248,7 +258,10 @@ export default function Portfolio() {
           <div className="glass-card max-w-2xl w-full rounded-3xl overflow-hidden border border-slate-200 dark:border-slate-700 shadow-2xl space-y-6 relative max-h-[90vh] overflow-y-auto">
             
             {/* Modal Header */}
-            <div className={`p-6 bg-gradient-to-r ${activeModalProject.imageBg} text-white relative`}>
+            <div
+              className={`p-6 ${typeof activeModalProject.imageBg === 'string' && /from-|to-/.test(activeModalProject.imageBg) ? `bg-gradient-to-r ${activeModalProject.imageBg}` : 'bg-cover bg-center'} text-white relative`}
+                style={typeof activeModalProject.imageBg === 'string' && /from-|to-/.test(activeModalProject.imageBg) ? undefined : { backgroundImage: `url(${activeModalProject.imageBg})` }}
+            >
               <button
                 onClick={() => setActiveModalProject(null)}
                 className="absolute top-4 right-4 p-2 rounded-full bg-black/40 hover:bg-black/60 text-white backdrop-blur-md transition-colors"

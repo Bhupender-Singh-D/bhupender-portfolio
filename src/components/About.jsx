@@ -30,15 +30,15 @@ export default function About() {
           {/* Left Column: Detailed Bio */}
           <div className="lg:col-span-7 space-y-6">
             <h3 className="text-2xl sm:text-3xl font-display font-semibold text-slate-900 dark:text-white">
-              Passionate Web Designer & Front-End Developer based in Mohali, India
+              Creative Web Designer & Front-End Developer based in Mohali & Chandigarh, India
             </h3>
             
             <p className="text-base sm:text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
-              I'm a passionate Web Designer and Front-End Developer with <strong className="text-blue-600 dark:text-cyan-400 font-semibold">2.5+ years of professional experience</strong> creating modern websites for businesses, agencies, and startups.
+              I am a results-driven <strong className="text-slate-900 dark:text-white font-semibold">Web Designer and Front-End Developer</strong> with <strong className="text-blue-600 dark:text-cyan-400 font-semibold">2.5+ years of professional experience</strong> engineering modern, conversion-focused websites for businesses, digital agencies, and tech startups.
             </p>
 
             <p className="text-base sm:text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
-              I enjoy transforming creative concepts into responsive, interactive, and visually captivating digital experiences. My engineering approach focuses on <strong>clean modular code</strong>, strict adherence to <strong>UI/UX best practices</strong>, deep performance optimization, and flawless cross-browser compatibility.
+              Specializing in <strong className="text-slate-900 dark:text-white font-semibold">React.js, Tailwind CSS, WordPress, WooCommerce, and Figma to HTML conversion</strong>, I transform complex design mockups into pixel-perfect, responsive web solutions with clean modular code, fast page load speeds, and intuitive UI/UX workflows.
             </p>
 
             {/* Quick Contact Badges */}

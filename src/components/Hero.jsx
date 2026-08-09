@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { ArrowRight, Download, Send, Sparkles, CheckCircle2, Code, Layers, Smartphone } from 'lucide-react';
+import { ArrowRight, Download, Send, Sparkles, CheckCircle2, Code, Layers } from 'lucide-react';
 import ProfileImage from '../assets/images/profile.webp';
+
 const roles = [
   "Web Designer & Front-End Developer",
-  "React.js Specialist",
+  "React.js & Frontend Specialist",
   "UI/UX & Figma-to-Code Expert",
-  "Responsive Website Specialist"
+  "WordPress & WooCommerce Developer"
 ];
 
 export default function Hero({ onOpenResume }) {
@@ -55,7 +56,7 @@ export default function Hero({ onOpenResume }) {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
               </span>
-              <span>Available for Hire & Freelance Work</span>
+              <span>Available for Freelance Projects & Full-Time Roles</span>
             </div>
 
             {/* Main Heading */}
@@ -78,22 +79,22 @@ export default function Hero({ onOpenResume }) {
 
             {/* Description */}
             <p className="text-base sm:text-lg text-slate-600 dark:text-slate-300 max-w-2xl leading-relaxed mx-auto lg:mx-0">
-              I design and develop modern, responsive, user-friendly websites that combine creativity with performance. With <strong className="text-blue-600 dark:text-cyan-400 font-semibold">2.5+ years of experience</strong>, I specialize in creating pixel-perfect interfaces, responsive layouts, and engaging user experiences using modern front-end technologies.
+              Professional <strong className="text-slate-900 dark:text-white font-semibold">Web Designer & Front-End Developer</strong> based in Mohali & Chandigarh with <strong className="text-blue-600 dark:text-cyan-400 font-semibold">2.5+ years of experience</strong>. I specialize in building high-performing React.js web apps, pixel-perfect Figma conversions, and customized WordPress websites optimized for speed, SEO, and conversions.
             </p>
 
             {/* Feature badges */}
             <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2">
               <div className="flex items-center gap-1.5 text-xs sm:text-sm font-medium text-slate-700 dark:text-slate-300">
                 <CheckCircle2 className="w-4 h-4 text-emerald-500" />
-                <span>Pixel-Perfect Design</span>
+                <span>Pixel-Perfect Layouts</span>
               </div>
               <div className="flex items-center gap-1.5 text-xs sm:text-sm font-medium text-slate-700 dark:text-slate-300">
                 <CheckCircle2 className="w-4 h-4 text-emerald-500" />
-                <span>Fast Performance</span>
+                <span>Core Web Vitals Fast</span>
               </div>
               <div className="flex items-center gap-1.5 text-xs sm:text-sm font-medium text-slate-700 dark:text-slate-300">
                 <CheckCircle2 className="w-4 h-4 text-emerald-500" />
-                <span>SEO Optimized</span>
+                <span>SEO & Accessibility Ready</span>
               </div>
             </div>
 
@@ -104,8 +105,17 @@ export default function Hero({ onOpenResume }) {
                 href="#portfolio"
                 className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl font-semibold text-white bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 hover:opacity-95 shadow-lg shadow-blue-500/25 hover:shadow-blue-500/40 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200"
               >
-                <span>View Portfolio</span>
+                <span>View My Work</span>
                 <ArrowRight className="w-4 h-4" />
+              </a>
+
+              {/* Hire Me / Contact */}
+              <a
+                href="#contact"
+                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl font-semibold text-blue-600 dark:text-cyan-400 border border-blue-600/30 dark:border-cyan-400/30 hover:bg-blue-600/10 dark:hover:bg-cyan-400/10 transition-all duration-200"
+              >
+                <Send className="w-4 h-4" />
+                <span>Hire Me</span>
               </a>
 
               {/* Download Resume */}
@@ -116,15 +126,6 @@ export default function Hero({ onOpenResume }) {
                 <Download className="w-4 h-4 text-blue-600 dark:text-cyan-400" />
                 <span>Download Resume</span>
               </button>
-
-              {/* Contact Me */}
-              <a
-                href="#contact"
-                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl font-semibold text-blue-600 dark:text-cyan-400 border border-blue-600/30 dark:border-cyan-400/30 hover:bg-blue-600/10 dark:hover:bg-cyan-400/10 transition-all duration-200"
-              >
-                <Send className="w-4 h-4" />
-                <span>Contact Me</span>
-              </a>
             </div>
 
           </div>
@@ -154,7 +155,13 @@ export default function Hero({ onOpenResume }) {
                 {/* Avatar / Developer Graphic Illustration */}
                 <div className="relative my-4 flex-1 flex flex-col items-center justify-center bg-gradient-to-b from-blue-500/10 to-purple-500/10 rounded-2xl p-6 border border-slate-200/50 dark:border-slate-800/50">
                   <div className="relative w-28 h-28 sm:w-40 sm:h-40 rounded-full bg-gradient-to-tr from-blue-600 to-purple-600 p-1 shadow-xl mb-4 group-hover:scale-105 transition-transform duration-300">
-                    <img src={ProfileImage} alt="Bhupender Singh" className="w-full h-full rounded-full object-cover" />
+                    <img
+                      src={ProfileImage}
+                      alt="Bhupender Singh — Web Designer & Front-End Developer"
+                      width={160}
+                      height={160}
+                      className="w-full h-full rounded-full object-cover"
+                    />
                     {/* Active Status Badge */}
                     <div className="absolute bottom-1 right-1 w-6 h-6 rounded-full bg-emerald-500 border-2 border-slate-900 flex items-center justify-center">
                       <span className="w-2 h-2 rounded-full bg-white animate-ping"></span>
@@ -165,7 +172,7 @@ export default function Hero({ onOpenResume }) {
                     Bhupender Singh
                   </h3>
                   <p className="text-xs text-blue-600 dark:text-cyan-400 font-semibold tracking-wide mt-0.5">
-                    Mohali, Punjab, India
+                    Mohali & Chandigarh, India
                   </p>
 
                   <div className="mt-4 flex items-center gap-2">
@@ -176,7 +183,7 @@ export default function Hero({ onOpenResume }) {
                       Tailwind
                     </span>
                     <span className="px-2.5 py-1 rounded-md text-[11px] font-mono bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 font-semibold">
-                      UI/UX
+                      WordPress
                     </span>
                   </div>
                 </div>
@@ -203,3 +210,4 @@ export default function Hero({ onOpenResume }) {
     </section>
   );
 }
+

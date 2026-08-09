@@ -245,13 +245,14 @@ export default function Contact() {
                 {/* Row 1: Full Name & Email */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="space-y-1.5">
-                    <label className="text-xs font-semibold uppercase tracking-wider text-slate-700 dark:text-slate-300">
+                    <label htmlFor="fullName" className="text-xs font-semibold uppercase tracking-wider text-slate-700 dark:text-slate-300">
                       Full Name <span className="text-rose-500">*</span>
                     </label>
                     <input
                       id="fullName"
                       type="text"
                       name="fullName"
+                      autoComplete="name"
                       value={formData.fullName}
                       onChange={handleInputChange}
                       placeholder="e.g. Alex Morgan"
@@ -262,13 +263,14 @@ export default function Contact() {
                   </div>
 
                   <div className="space-y-1.5">
-                    <label className="text-xs font-semibold uppercase tracking-wider text-slate-700 dark:text-slate-300">
+                    <label htmlFor="email" className="text-xs font-semibold uppercase tracking-wider text-slate-700 dark:text-slate-300">
                       Email Address <span className="text-rose-500">*</span>
                     </label>
                     <input
                       id="email"
                       type="email"
                       name="email"
+                      autoComplete="email"
                       value={formData.email}
                       onChange={handleInputChange}
                       placeholder="alex@example.com"
@@ -283,13 +285,14 @@ export default function Contact() {
                 {/* Row 2: Phone & Subject */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="space-y-1.5">
-                    <label className="text-xs font-semibold uppercase tracking-wider text-slate-700 dark:text-slate-300">
+                    <label htmlFor="phone" className="text-xs font-semibold uppercase tracking-wider text-slate-700 dark:text-slate-300">
                       Phone Number <span className="text-rose-500">*</span>
                     </label>
                     <input
                       id="phone"
                       type="tel"
                       name="phone"
+                      autoComplete="tel"
                       value={formData.phone}
                       onChange={handleInputChange}
                       placeholder="+91 9876543210"
@@ -299,7 +302,7 @@ export default function Contact() {
                   </div>
 
                   <div className="space-y-1.5">
-                    <label className="text-xs font-semibold uppercase tracking-wider text-slate-700 dark:text-slate-300">
+                    <label htmlFor="subject" className="text-xs font-semibold uppercase tracking-wider text-slate-700 dark:text-slate-300">
                       Subject <span className="text-rose-500">*</span>
                     </label>
                     <input
@@ -317,7 +320,7 @@ export default function Contact() {
 
                 {/* Message */}
                 <div className="space-y-1.5">
-                  <label className="text-xs font-semibold uppercase tracking-wider text-slate-700 dark:text-slate-300">
+                  <label htmlFor="message" className="text-xs font-semibold uppercase tracking-wider text-slate-700 dark:text-slate-300">
                     Message <span className="text-rose-500">*</span>
                   </label>
                   <textarea

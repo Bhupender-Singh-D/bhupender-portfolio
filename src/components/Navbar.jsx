@@ -118,6 +118,14 @@ export default function Navbar({ isDark, setIsDark, onOpenResume }) {
               {isDark ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5 text-slate-700" />}
             </button>
 
+            {/* Hire Me CTA Button */}
+            <a
+              href="#contact"
+              className="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-2 text-sm font-semibold text-blue-600 dark:text-cyan-400 border border-blue-600/30 dark:border-cyan-400/30 hover:bg-blue-600/10 dark:hover:bg-cyan-400/10 rounded-xl transition-all duration-200"
+            >
+              Hire Me
+            </a>
+
             {/* Resume Button */}
             <button
               onClick={onOpenResume}

@@ -9,9 +9,9 @@ export default function Footer() {
   return (
     <footer className="relative bg-slate-900 text-slate-300 border-t border-slate-800 pt-16 pb-12 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-12">
-        
+
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start justify-between">
-          
+
           {/* Brand Col */}
           <div className="md:col-span-5 space-y-4">
             <a href="#home" className="flex items-center gap-2">
@@ -68,7 +68,7 @@ export default function Footer() {
             </h4>
             <div className="flex items-center md:justify-end gap-3">
               <a
-                href="https://www.linkedin.com"
+                href="https://www.linkedin.com/in/bhupender-singh-b39ba9289"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2.5 rounded-xl bg-slate-800/80 hover:bg-blue-600 text-slate-300 hover:text-white transition-all duration-200"
@@ -77,7 +77,7 @@ export default function Footer() {
                 <Linkedin className="w-4 h-4" />
               </a>
               <a
-                href="https://github.com"
+                href="https://github.com/Bhupender-Singh-D"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2.5 rounded-xl bg-slate-800/80 hover:bg-slate-700 text-slate-300 hover:text-white transition-all duration-200"
@@ -85,7 +85,7 @@ export default function Footer() {
               >
                 <Github className="w-4 h-4" />
               </a>
-              <a
+              {/* <a
                 href="https://www.instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -93,9 +93,9 @@ export default function Footer() {
                 title="Instagram"
               >
                 <Instagram className="w-4 h-4" />
-              </a>
+              </a> */}
               <a
-                href="https://www.behance.net"
+                href="https://www.behance.net/bhupender-singh"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2.5 rounded-xl bg-slate-800/80 hover:bg-cyan-600 text-slate-300 hover:text-white transition-all duration-200"

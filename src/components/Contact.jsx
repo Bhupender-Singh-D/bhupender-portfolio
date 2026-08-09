@@ -180,7 +180,7 @@ export default function Contact() {
                 </span>
                 <div className="flex items-center gap-3">
                   <a
-                    href="https://www.linkedin.com"
+                    href="https://www.linkedin.com/in/bhupender-singh-b39ba9289"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-3 rounded-xl glass-card text-blue-600 dark:text-blue-400 hover:scale-110 transition-transform"
@@ -189,7 +189,7 @@ export default function Contact() {
                     <Linkedin className="w-5 h-5" />
                   </a>
                   <a
-                    href="https://github.com"
+                    href="https://github.com/Bhupender-Singh-D"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-3 rounded-xl glass-card text-slate-800 dark:text-slate-200 hover:scale-110 transition-transform"
@@ -197,7 +197,7 @@ export default function Contact() {
                   >
                     <Github className="w-5 h-5" />
                   </a>
-                  <a
+                  {/* <a
                     href="https://www.instagram.com"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -205,9 +205,9 @@ export default function Contact() {
                     title="Instagram"
                   >
                     <Instagram className="w-5 h-5" />
-                  </a>
+                  </a> */}
                   <a
-                    href="https://www.behance.net"
+                    href="https://www.behance.net/bhupender-singh"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-3 rounded-xl glass-card text-blue-500 dark:text-cyan-400 hover:scale-110 transition-transform"

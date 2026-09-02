@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Cpu, Code, Palette, Layout, Wrench } from 'lucide-react';
+import ScrollReveal from './ScrollReveal';
 
 const skillCategories = [
   {
@@ -64,22 +65,24 @@ export default function Skills() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Title */}
-        <div className="text-center max-w-3xl mx-auto space-y-3 mb-12">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-purple-500/10 text-purple-600 dark:text-purple-400 text-xs font-bold uppercase tracking-wider">
-            <Cpu className="w-4 h-4" />
-            <span>Technical Expertise</span>
+        <ScrollReveal direction="up">
+          <div className="text-center max-w-3xl mx-auto space-y-3 mb-12">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-purple-500/10 text-purple-600 dark:text-purple-400 text-xs font-bold uppercase tracking-wider">
+              <Cpu className="w-4 h-4" />
+              <span>Technical Expertise</span>
+            </div>
+            <h2 className="text-3xl sm:text-5xl font-display font-bold text-slate-900 dark:text-white">
+              My <span className="text-gradient-primary">Skills</span> & Tools
+            </h2>
+            <div className="w-20 h-1.5 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full" />
           </div>
-          <h2 className="text-3xl sm:text-5xl font-display font-bold text-slate-900 dark:text-white">
-            My <span className="text-gradient-primary">Skills</span> & Tools
-          </h2>
-          <div className="w-20 h-1.5 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full" />
-        </div>
+        </ScrollReveal>
 
-        {/* Category Filter Tabs */}
+        {/* Category Filter Tabs - 5px Border Radius */}
         <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-12">
           <button
             onClick={() => setActiveTab('all')}
-            className={`px-5 py-2.5 rounded-xl font-medium text-sm transition-all duration-200 ${
+            className={`px-5 py-2.5 rounded-[5px] font-medium text-sm transition-all duration-200 focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:outline-none ${
               activeTab === 'all'
                 ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-md'
                 : 'glass-card text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800'
@@ -94,7 +97,7 @@ export default function Skills() {
               <button
                 key={cat.id}
                 onClick={() => setActiveTab(cat.id)}
-                className={`flex items-center gap-2 px-5 py-2.5 rounded-xl font-medium text-sm transition-all duration-200 ${
+                className={`flex items-center gap-2 px-5 py-2.5 rounded-[5px] font-medium text-sm transition-all duration-200 focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:outline-none ${
                   isActive
                     ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-md'
                     : 'glass-card text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800'
@@ -107,46 +110,47 @@ export default function Skills() {
           })}
         </div>
 
-        {/* Skills Grid */}
+        {/* Skills Grid - 8px Border Radius Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {filteredCategories.map((category) => {
+          {filteredCategories.map((category, idx) => {
             const CatIcon = category.icon;
             return (
-              <div 
-                key={category.id}
-                className="glass-card p-6 sm:p-8 rounded-3xl border border-slate-200/60 dark:border-slate-800 space-y-6"
-              >
-                <div className="flex items-center gap-3 border-b border-slate-200 dark:border-slate-800 pb-4">
-                  <div className="p-2.5 rounded-xl bg-blue-500/10 text-blue-600 dark:text-cyan-400">
-                    <CatIcon className="w-6 h-6" />
-                  </div>
-                  <h3 className="text-xl font-display font-bold text-slate-900 dark:text-white">
-                    {category.title}
-                  </h3>
-                </div>
-
-                <div className="space-y-4">
-                  {category.skills.map((skill, sIdx) => (
-                    <div key={sIdx} className="space-y-1.5">
-                      <div className="flex justify-between items-center text-sm">
-                        <span className="font-semibold text-slate-800 dark:text-slate-200">
-                          {skill.name}
-                        </span>
-                        <span className="text-xs font-mono font-bold text-blue-600 dark:text-cyan-400">
-                          {skill.level}%
-                        </span>
-                      </div>
-                      {/* Animated Progress Bar */}
-                      <div className="h-2.5 w-full bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden p-0.5">
-                        <div
-                          className={`h-full rounded-full bg-gradient-to-r ${skill.color} transition-all duration-1000 ease-out`}
-                          style={{ width: `${skill.level}%` }}
-                        />
-                      </div>
+              <ScrollReveal key={category.id} direction="up" delay={idx * 100}>
+                <div 
+                  className="glass-card p-6 sm:p-8 rounded-[8px] border border-slate-200/60 dark:border-slate-800 space-y-6"
+                >
+                  <div className="flex items-center gap-3 border-b border-slate-200 dark:border-slate-800 pb-4">
+                    <div className="p-2.5 rounded-[5px] bg-blue-500/10 text-blue-600 dark:text-cyan-400">
+                      <CatIcon className="w-6 h-6" />
                     </div>
-                  ))}
+                    <h3 className="text-xl font-display font-bold text-slate-900 dark:text-white">
+                      {category.title}
+                    </h3>
+                  </div>
+
+                  <div className="space-y-4">
+                    {category.skills.map((skill, sIdx) => (
+                      <div key={sIdx} className="space-y-1.5">
+                        <div className="flex justify-between items-center text-sm">
+                          <span className="font-semibold text-slate-800 dark:text-slate-200">
+                            {skill.name}
+                          </span>
+                          <span className="text-xs font-mono font-bold text-blue-600 dark:text-cyan-400">
+                            {skill.level}%
+                          </span>
+                        </div>
+                        {/* Animated Progress Bar */}
+                        <div className="h-2.5 w-full bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden p-0.5">
+                          <div
+                            className={`h-full rounded-full bg-gradient-to-r ${skill.color} transition-all duration-1000 ease-out`}
+                            style={{ width: `${skill.level}%` }}
+                          />
+                        </div>
+                      </div>
+                    ))}
+                  </div>
                 </div>
-              </div>
+              </ScrollReveal>
             );
           })}
         </div>

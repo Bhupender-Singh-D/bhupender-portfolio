@@ -67,9 +67,9 @@ export default function Navbar({ isDark, setIsDark, onOpenResume }) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
           
           {/* Logo */}
-          <a href="#home" className="flex items-center gap-2 group">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-blue-600 to-purple-600 p-[2px] transition-transform duration-300 group-hover:scale-105">
-              <div className="w-full h-full bg-slate-900 rounded-[10px] flex items-center justify-center text-white font-bold">
+          <a href="#home" className="flex items-center gap-2 group rounded-[5px] focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:outline-none">
+            <div className="w-10 h-10 rounded-[5px] bg-gradient-to-tr from-blue-600 to-purple-600 p-[2px] transition-transform duration-300 group-hover:scale-105">
+              <div className="w-full h-full bg-slate-900 rounded-[3px] flex items-center justify-center text-white font-bold">
                 <Code2 className="w-5 h-5 text-cyan-400" />
               </div>
             </div>
@@ -91,7 +91,7 @@ export default function Navbar({ isDark, setIsDark, onOpenResume }) {
                 <a
                   key={link.name}
                   href={link.href}
-                  className={`px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 relative ${
+                  className={`px-3 py-2 rounded-[5px] text-sm font-medium transition-all duration-200 relative focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:outline-none ${
                     isActive
                       ? 'text-blue-600 dark:text-cyan-400 font-semibold'
                       : 'text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-cyan-400 hover:bg-slate-100/50 dark:hover:bg-slate-800/40'
@@ -111,7 +111,7 @@ export default function Navbar({ isDark, setIsDark, onOpenResume }) {
             {/* Theme Toggle */}
             <button
               onClick={() => setIsDark(!isDark)}
-              className="p-2.5 rounded-xl bg-slate-200/80 dark:bg-slate-800/80 text-slate-700 dark:text-amber-300 hover:scale-105 active:scale-95 transition-all duration-200 border border-slate-300/50 dark:border-slate-700/50"
+              className="p-2.5 rounded-[5px] bg-slate-200/80 dark:bg-slate-800/80 text-slate-700 dark:text-amber-300 hover:scale-105 active:scale-95 transition-all duration-200 border border-slate-300/50 dark:border-slate-700/50 focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:outline-none"
               aria-label="Toggle dark mode"
               title={isDark ? "Switch to Light Mode" : "Switch to Dark Mode"}
             >
@@ -121,7 +121,7 @@ export default function Navbar({ isDark, setIsDark, onOpenResume }) {
             {/* Hire Me CTA Button */}
             <a
               href="#contact"
-              className="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-2 text-sm font-semibold text-blue-600 dark:text-cyan-400 border border-blue-600/30 dark:border-cyan-400/30 hover:bg-blue-600/10 dark:hover:bg-cyan-400/10 rounded-xl transition-all duration-200"
+              className="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-2 text-sm font-semibold text-blue-600 dark:text-cyan-400 border border-blue-600/30 dark:border-cyan-400/30 hover:bg-blue-600/10 dark:hover:bg-cyan-400/10 rounded-[5px] transition-all duration-200 focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:outline-none"
             >
               Hire Me
             </a>
@@ -129,7 +129,7 @@ export default function Navbar({ isDark, setIsDark, onOpenResume }) {
             {/* Resume Button */}
             <button
               onClick={onOpenResume}
-              className="hidden sm:inline-flex items-center gap-2 px-4 py-2 text-sm font-semibold text-white bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 rounded-xl shadow-md hover:shadow-blue-500/25 hover:scale-[1.02] active:scale-95 transition-all duration-200"
+              className="hidden sm:inline-flex items-center gap-2 px-4 py-2 text-sm font-semibold text-white bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 rounded-[5px] shadow-md hover:shadow-blue-500/25 hover:scale-[1.02] active:scale-95 transition-all duration-200 focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:outline-none"
             >
               <Download className="w-4 h-4" />
               <span>Resume</span>
@@ -138,8 +138,9 @@ export default function Navbar({ isDark, setIsDark, onOpenResume }) {
             {/* Mobile Hamburger Button */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="lg:hidden p-2.5 rounded-xl bg-slate-200/80 dark:bg-slate-800/80 text-slate-700 dark:text-slate-200 border border-slate-300/50 dark:border-slate-700/50"
-              aria-label="Open menu"
+              className="lg:hidden p-2.5 rounded-[5px] bg-slate-200/80 dark:bg-slate-800/80 text-slate-700 dark:text-slate-200 border border-slate-300/50 dark:border-slate-700/50 focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:outline-none"
+              aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
+              aria-expanded={mobileMenuOpen}
             >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
@@ -149,13 +150,13 @@ export default function Navbar({ isDark, setIsDark, onOpenResume }) {
 
       {/* Mobile Menu Drawer */}
       {mobileMenuOpen && (
-        <div className="lg:hidden glass-panel border-b border-slate-200 dark:border-slate-800 px-4 pt-3 pb-6 space-y-2 shadow-2xl animate-in slide-in-from-top duration-300">
+        <div className="lg:hidden glass-panel border-b border-slate-200 dark:border-slate-800 px-4 pt-3 pb-6 space-y-2 shadow-2xl animate-in slide-in-from-top duration-300 rounded-[8px]">
           {navLinks.map((link) => (
             <a
               key={link.name}
               href={link.href}
               onClick={() => setMobileMenuOpen(false)}
-              className={`block px-4 py-3 rounded-xl text-base font-medium transition-colors ${
+              className={`block px-4 py-3 rounded-[5px] text-base font-medium transition-colors ${
                 activeSection === link.href.substring(1)
                   ? 'bg-blue-600/10 text-blue-600 dark:text-cyan-400 font-semibold'
                   : 'text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800'
@@ -170,7 +171,7 @@ export default function Navbar({ isDark, setIsDark, onOpenResume }) {
                 setMobileMenuOpen(false);
                 onOpenResume();
               }}
-              className="w-full flex items-center justify-center gap-2 py-3 rounded-xl font-semibold text-white bg-gradient-to-r from-blue-600 to-purple-600 shadow-md"
+              className="w-full flex items-center justify-center gap-2 py-3 rounded-[5px] font-semibold text-white bg-gradient-to-r from-blue-600 to-purple-600 shadow-md"
             >
               <Download className="w-4 h-4" />
               <span>Download Resume</span>

@@ -10,7 +10,7 @@ export default function ResumeModal({ isOpen, onClose }) {
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/75 backdrop-blur-md animate-in fade-in duration-200">
-      <div className="glass-card max-w-3xl w-full rounded-3xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-2xl space-y-6 relative max-h-[92vh] flex flex-col bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100">
+      <div className="glass-card max-w-3xl w-full rounded-[8px] overflow-hidden border border-slate-200 dark:border-slate-800 shadow-2xl space-y-6 relative max-h-[92vh] flex flex-col bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100">
         
         {/* Modal Top Toolbar */}
         <div className="p-4 sm:p-6 bg-gradient-to-r from-blue-600 to-purple-600 text-white flex items-center justify-between">
@@ -24,15 +24,17 @@ export default function ResumeModal({ isOpen, onClose }) {
           <div className="flex items-center gap-2">
             <button
               onClick={handlePrint}
-              className="p-2 rounded-xl bg-white/20 hover:bg-white/30 text-white transition-colors"
+              className="p-2 rounded-[5px] bg-white/20 hover:bg-white/30 text-white transition-colors focus-visible:ring-2 focus-visible:ring-white focus-visible:outline-none"
               title="Print / Save PDF"
+              aria-label="Print or save PDF"
             >
               <Printer className="w-4 h-4" />
             </button>
             <button
               onClick={onClose}
-              className="p-2 rounded-xl bg-white/20 hover:bg-white/30 text-white transition-colors"
+              className="p-2 rounded-[5px] bg-white/20 hover:bg-white/30 text-white transition-colors focus-visible:ring-2 focus-visible:ring-white focus-visible:outline-none"
               title="Close Modal"
+              aria-label="Close modal"
             >
               <X className="w-5 h-5" />
             </button>
@@ -66,9 +68,9 @@ export default function ResumeModal({ isOpen, onClose }) {
 
           {/* Profile Summary */}
           <div className="space-y-2">
-            <h3 className="text-sm font-bold uppercase tracking-wider text-blue-600 dark:text-cyan-400">
+            <h2 className="text-sm font-bold uppercase tracking-wider text-blue-600 dark:text-cyan-400">
               Professional Summary
-            </h3>
+            </h2>
             <p className="text-sm leading-relaxed">
               Passionate Web Designer and Front-End Developer with 2.5+ years of experience delivering modern, responsive, and pixel-perfect web applications. Expert in HTML5, CSS3, JavaScript, React.js, Tailwind CSS, Bootstrap, and WordPress integration. Dedicated to clean code standards, UI/UX best practices, and fast core web vitals performance.
             </p>
@@ -76,9 +78,9 @@ export default function ResumeModal({ isOpen, onClose }) {
 
           {/* Technical Skills */}
           <div className="space-y-3">
-            <h3 className="text-sm font-bold uppercase tracking-wider text-blue-600 dark:text-cyan-400">
+            <h2 className="text-sm font-bold uppercase tracking-wider text-blue-600 dark:text-cyan-400">
               Core Technical Competencies
-            </h3>
+            </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm">
               <div><strong className="text-slate-900 dark:text-white">Front-End:</strong> React.js, JavaScript (ES6+), HTML5, CSS3, Tailwind CSS, Bootstrap 5, jQuery</div>
               <div><strong className="text-slate-900 dark:text-white">Design & Tools:</strong> Figma, Adobe Photoshop, Illustrator, Canva, Git, GitHub</div>
@@ -89,20 +91,20 @@ export default function ResumeModal({ isOpen, onClose }) {
 
           {/* Work Experience */}
           <div className="space-y-3">
-            <h3 className="text-sm font-bold uppercase tracking-wider text-blue-600 dark:text-cyan-400">
+            <h2 className="text-sm font-bold uppercase tracking-wider text-blue-600 dark:text-cyan-400">
               Professional Experience
-            </h3>
+            </h2>
 
             <div className="space-y-4">
-              <div className="rounded-xl border border-slate-200 dark:border-slate-800 p-4">
+              <div className="rounded-[8px] border border-slate-200 dark:border-slate-800 p-4">
                 <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-1">
                   <div>
-                    <h4 className="font-bold text-base text-slate-900 dark:text-white">
+                    <h3 className="font-bold text-base text-slate-900 dark:text-white">
                       Web Designer / Frontend Developer
-                    </h4>
+                    </h3>
                     <p className="text-xs text-slate-500">Kindlebit Solutions Pvt. Ltd. | Mohali, India</p>
                   </div>
-                  <span className="text-xs font-semibold px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-800">
+                  <span className="text-xs font-semibold px-2.5 py-1 rounded-[5px] bg-slate-100 dark:bg-slate-800">
                     16 Sep 2024 – Present
                   </span>
                 </div>
@@ -113,15 +115,15 @@ export default function ResumeModal({ isOpen, onClose }) {
                 </ul>
               </div>
 
-              <div className="rounded-xl border border-slate-200 dark:border-slate-800 p-4">
+              <div className="rounded-[8px] border border-slate-200 dark:border-slate-800 p-4">
                 <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-1">
                   <div>
-                    <h4 className="font-bold text-base text-slate-900 dark:text-white">
+                    <h3 className="font-bold text-base text-slate-900 dark:text-white">
                       Web Designer
-                    </h4>
+                    </h3>
                     <p className="text-xs text-slate-500">Finesin Tech Pvt. Ltd. | Mohali, India</p>
                   </div>
-                  <span className="text-xs font-semibold px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-800">
+                  <span className="text-xs font-semibold px-2.5 py-1 rounded-[5px] bg-slate-100 dark:bg-slate-800">
                     19 Oct 2023 – 05 Jun 2024
                   </span>
                 </div>
@@ -136,9 +138,9 @@ export default function ResumeModal({ isOpen, onClose }) {
 
           {/* Key Achievements */}
           <div className="space-y-2">
-            <h3 className="text-sm font-bold uppercase tracking-wider text-blue-600 dark:text-cyan-400">
+            <h2 className="text-sm font-bold uppercase tracking-wider text-blue-600 dark:text-cyan-400">
               Key Strengths & Highlights
-            </h3>
+            </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs sm:text-sm">
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-emerald-500" />
@@ -161,17 +163,17 @@ export default function ResumeModal({ isOpen, onClose }) {
 
         </div>
 
-        {/* Modal Footer Actions */}
+        {/* Modal Footer Actions - 5px Button Radius */}
         <div className="p-4 sm:p-6 border-t border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900/80 flex items-center justify-end gap-3">
           <button
             onClick={onClose}
-            className="px-5 py-2.5 rounded-xl text-sm font-semibold text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors"
+            className="px-5 py-2.5 rounded-[5px] text-sm font-semibold text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:outline-none"
           >
             Close
           </button>
           <button
             onClick={handlePrint}
-            className="px-6 py-2.5 rounded-xl text-sm font-bold text-white bg-gradient-to-r from-blue-600 to-purple-600 shadow-md hover:opacity-95 transition-opacity flex items-center gap-2"
+            className="px-6 py-2.5 rounded-[5px] text-sm font-bold text-white bg-gradient-to-r from-blue-600 to-purple-600 shadow-md hover:opacity-95 transition-opacity flex items-center gap-2 focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:outline-none"
           >
             <Download className="w-4 h-4" />
             <span>Download PDF</span>

@@ -81,7 +81,7 @@ export default function Hero({ onOpenResume }) {
 
               {/* Description */}
               <p className="text-base sm:text-lg text-slate-600 dark:text-slate-300 max-w-2xl leading-relaxed mx-auto lg:mx-0 mt-4">
-                Professional <strong className="text-slate-900 dark:text-white font-semibold">Web Designer & Front-End Developer</strong> based in Mohali & Chandigarh with <strong className="text-blue-600 dark:text-cyan-400 font-semibold">2.5+ years of experience</strong>. I specialize in building high-performing React.js web apps, pixel-perfect Figma conversions, and customized WordPress websites optimized for speed, SEO, and conversions.
+                Professional <strong className="text-slate-900 dark:text-white font-semibold">Web Designer & Front-End Developer</strong> based in Punjab, India with <strong className="text-blue-600 dark:text-cyan-400 font-semibold">2.8+ years of experience</strong>. I specialize in building high-performing React.js web apps, pixel-perfect Figma conversions, and customized WordPress websites optimized for speed, SEO, and conversions.
               </p>
 
               {/* Feature badges */}
@@ -121,13 +121,14 @@ export default function Hero({ onOpenResume }) {
                 </a>
 
                 {/* Download Resume */}
-                <button
-                  onClick={onOpenResume}
+                <a
+                  href="/Bhupender_Singh_Front_End_Developer.pdf"
+                  download="Bhupender_Singh_Front_End_Developer.pdf"
                   className="inline-flex items-center gap-2 px-6 py-3.5 rounded-[5px] font-semibold text-slate-800 dark:text-white glass-card hover:bg-slate-100 dark:hover:bg-slate-800 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:outline-none"
                 >
                   <Download className="w-4 h-4 text-blue-600 dark:text-cyan-400" />
                   <span>Download Resume</span>
-                </button>
+                </a>
               </div>
             </ScrollReveal>
           </div>
@@ -195,7 +196,7 @@ export default function Hero({ onOpenResume }) {
                   {/* Floating Badges - 8px Border Radius */}
                   <div className="absolute -top-2 -right-3 px-3.5 py-2 rounded-[8px] glass-card border border-purple-500/30 text-xs font-semibold flex items-center gap-2 shadow-lg animate-float">
                     <Code className="w-4 h-4 text-purple-500" />
-                    <span className="text-slate-800 dark:text-slate-200">2.5+ Yrs Exp</span>
+                    <span className="text-slate-800 dark:text-slate-200">2.8+ Yrs Exp</span>
                   </div>
 
                   <div className="absolute -bottom-2 -left-2 px-3.5 py-2 rounded-[8px] glass-card border border-blue-500/30 text-xs font-semibold flex items-center gap-2 shadow-lg animate-float" style={{ animationDelay: '2s' }}>

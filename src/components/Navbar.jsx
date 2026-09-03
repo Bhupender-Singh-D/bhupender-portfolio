@@ -127,13 +127,14 @@ export default function Navbar({ isDark, setIsDark, onOpenResume }) {
             </a>
 
             {/* Resume Button */}
-            <button
-              onClick={onOpenResume}
+            <a
+              href="/Bhupender_Singh_Front_End_Developer.pdf"
+              download="Bhupender_Singh_Front_End_Developer.pdf"
               className="hidden sm:inline-flex items-center gap-2 px-4 py-2 text-sm font-semibold text-white bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 rounded-[5px] shadow-md hover:shadow-blue-500/25 hover:scale-[1.02] active:scale-95 transition-all duration-200 focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:outline-none"
             >
               <Download className="w-4 h-4" />
               <span>Resume</span>
-            </button>
+            </a>
 
             {/* Mobile Hamburger Button */}
             <button
@@ -166,16 +167,15 @@ export default function Navbar({ isDark, setIsDark, onOpenResume }) {
             </a>
           ))}
           <div className="pt-2">
-            <button
-              onClick={() => {
-                setMobileMenuOpen(false);
-                onOpenResume();
-              }}
+            <a
+              href="/Bhupender_Singh_Front_End_Developer.pdf"
+              download="Bhupender_Singh_Front_End_Developer.pdf"
+              onClick={() => setMobileMenuOpen(false)}
               className="w-full flex items-center justify-center gap-2 py-3 rounded-[5px] font-semibold text-white bg-gradient-to-r from-blue-600 to-purple-600 shadow-md"
             >
               <Download className="w-4 h-4" />
               <span>Download Resume</span>
-            </button>
+            </a>
           </div>
         </div>
       )}

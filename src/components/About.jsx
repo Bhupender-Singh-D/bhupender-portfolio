@@ -3,7 +3,7 @@ import { User, Award, CheckCircle, Smile, MapPin, Mail, Phone, Code2 } from 'luc
 import ScrollReveal from './ScrollReveal';
 
 const stats = [
-  { label: 'Years Experience', count: '2.5+', icon: Award, color: 'from-blue-500 to-indigo-500' },
+  { label: 'Years Experience', count: '2.8+', icon: Award, color: 'from-blue-500 to-indigo-500' },
   { label: 'Projects Completed', count: '50+', icon: Code2, color: 'from-purple-500 to-pink-500' },
   { label: 'Client Satisfaction', count: '100%', icon: CheckCircle, color: 'from-emerald-500 to-teal-500' },
   { label: 'Happy Clients', count: '30+', icon: Smile, color: 'from-cyan-500 to-blue-500' },
@@ -34,11 +34,11 @@ export default function About() {
           <div className="lg:col-span-7 space-y-6">
             <ScrollReveal direction="right" delay={100}>
               <h3 className="text-2xl sm:text-3xl font-display font-semibold text-slate-900 dark:text-white">
-                Creative Web Designer & Front-End Developer based in Mohali & Chandigarh, India
+                Creative Web Designer & Front-End Developer based in Punjab, India
               </h3>
               
               <p className="text-base sm:text-lg text-slate-600 dark:text-slate-300 leading-relaxed mt-4">
-                I am a results-driven <strong className="text-slate-900 dark:text-white font-semibold">Web Designer and Front-End Developer</strong> with <strong className="text-blue-600 dark:text-cyan-400 font-semibold">2.5+ years of professional experience</strong> engineering modern, conversion-focused websites for businesses, digital agencies, and tech startups.
+                I am a results-driven <strong className="text-slate-900 dark:text-white font-semibold">Web Designer and Front-End Developer</strong> with <strong className="text-blue-600 dark:text-cyan-400 font-semibold">2.8+ years of professional experience</strong> engineering modern, conversion-focused websites for businesses, digital agencies, and tech startups.
               </p>
 
               <p className="text-base sm:text-lg text-slate-600 dark:text-slate-300 leading-relaxed mt-3">
@@ -53,7 +53,7 @@ export default function About() {
                   </div>
                   <div>
                     <span className="text-xs text-slate-500 dark:text-slate-400 uppercase font-semibold">Location</span>
-                    <p className="text-sm font-medium text-slate-800 dark:text-slate-200">Mohali, Punjab, India</p>
+                    <p className="text-sm font-medium text-slate-800 dark:text-slate-200">Sahibzada Ajit Singh Nagar, Punjab, India</p>
                   </div>
                 </div>
 

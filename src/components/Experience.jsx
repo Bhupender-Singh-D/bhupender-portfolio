@@ -15,23 +15,25 @@ const responsibilities = [
 
 const experienceEntries = [
   {
-    company: 'Kindlebit Solutions Pvt. Ltd.',
-    role: 'Web Designer / Frontend Developer',
-    period: '16 September 2024 – Present',
-    description: 'Worked on modern client-facing web experiences, translating design requirements into polished responsive front-end interfaces with a strong focus on usability and performance.',
+    company: 'KindleBit Solutions Pvt. Ltd.',
+    role: 'Web Designer',
+    period: '09/2024 – Present',
+    description: 'Develop responsive, mobile-first websites and web applications using HTML5, CSS3, Bootstrap 5, Tailwind CSS, JavaScript, jQuery, React.js and WordPress.',
     highlights: [
-      'Built responsive interfaces with React, Tailwind CSS, and clean semantic HTML/CSS.',
-      'Collaborated with teams to deliver visually consistent and user-friendly web solutions.'
+      'Build reusable and interactive React.js components for dynamic, scalable and user-friendly interfaces.',
+      'Translate design concepts and client requirements into responsive web pages with attention to usability.',
+      'Optimize website performance, page speed, SEO and cross-browser compatibility across modern browsers.'
     ]
   },
   {
-    company: 'Finesin Tech Pvt. Ltd.',
+    company: 'FinsinTech Pvt. Ltd.',
     role: 'Web Designer',
-    period: '19 October 2023 – 05 June 2024',
-    description: 'Developed and maintained website layouts and front-end components for business and marketing projects while improving responsiveness and overall user experience.',
+    period: '10/2023 – 06/2024',
+    description: 'Developed responsive and mobile-friendly websites using HTML5, CSS3, Bootstrap 5, Tailwind CSS, JavaScript, jQuery and WordPress.',
     highlights: [
-      'Converted UI designs into pixel-perfect pages and reusable front-end components.',
-      'Improved website performance and responsiveness across devices and browsers.'
+      'Implemented web interfaces from design references while maintaining responsive layouts and cross-browser compatibility.',
+      'Created clean, user-friendly interfaces and supported website updates based on project requirements.',
+      'Collaborated with team members to deliver assigned web design work within agreed timelines.'
     ]
   }
 ];
@@ -66,7 +68,7 @@ export default function Experience() {
               <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-200 dark:border-slate-800 pb-6 mb-6">
                 <div className="space-y-1">
                   <div className="inline-flex items-center gap-2 px-3 py-1 rounded-[5px] bg-blue-500/10 text-blue-600 dark:text-cyan-400 text-xs font-bold">
-                    <span>2.5+ Years Experience</span>
+                    <span>2.8+ Years Experience</span>
                   </div>
                   <h3 className="text-2xl sm:text-3xl font-display font-bold text-slate-900 dark:text-white">
                     Web Designer & Front-End Developer
@@ -75,7 +77,7 @@ export default function Experience() {
                     <span>IT Solutions & Web Agencies</span>
                     <span>•</span>
                     <span className="flex items-center gap-1 text-slate-500 text-sm">
-                      <MapPin className="w-3.5 h-3.5" /> Mohali, Punjab, India
+                      <MapPin className="w-3.5 h-3.5" /> Sahibzada Ajit Singh Nagar, Punjab, India
                     </span>
                   </p>
                 </div>

@@ -26,11 +26,11 @@ export default function Footer() {
             </a>
 
             <p className="text-sm text-slate-400 leading-relaxed max-w-sm">
-              Web Designer & Front-End Developer with 2.5+ years of experience building pixel-perfect, modern, and high-performance websites for startups and businesses worldwide.
+              Web Designer & Front-End Developer with 2.8+ years of experience building pixel-perfect, modern, and high-performance websites for startups and businesses worldwide.
             </p>
 
             <p className="text-xs text-slate-500 font-mono">
-              Mohali, Punjab, India • bhupendernadal@gmail.com
+              Sahibzada Ajit Singh Nagar, Punjab, India • bhupendernadal@gmail.com
             </p>
           </div>
 

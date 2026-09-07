@@ -12,7 +12,7 @@ const navLinks = [
   { name: 'Contact', href: '#contact' },
 ];
 
-export default function Navbar({ isDark, setIsDark, onOpenResume }) {
+export default function Navbar({ isDark, setIsDark }) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
@@ -54,18 +54,17 @@ export default function Navbar({ isDark, setIsDark, onOpenResume }) {
   return (
     <header className="fixed top-0 left-0 w-full z-50 transition-all duration-300">
       {/* Scroll Progress Bar */}
-      <div 
-        className="h-1 bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-500 transition-all duration-150" 
+      <div
+        className="h-1 bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-500 transition-all duration-150"
         style={{ width: `${scrollProgress}%` }}
       />
 
-      <nav className={`w-full transition-all duration-300 ${
-        isScrolled 
-          ? 'glass-panel shadow-lg py-3 border-b border-slate-200/50 dark:border-slate-800/80' 
-          : 'bg-transparent py-5'
-      }`}>
+      <nav className={`w-full transition-all duration-300 ${isScrolled
+        ? 'glass-panel shadow-lg py-3 border-b border-slate-200/50 dark:border-slate-800/80'
+        : 'bg-transparent py-5'
+        }`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-          
+
           {/* Logo */}
           <a href="#home" className="flex items-center gap-2 group rounded-[5px] focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:outline-none">
             <div className="w-10 h-10 rounded-[5px] bg-gradient-to-tr from-blue-600 to-purple-600 p-[2px] transition-transform duration-300 group-hover:scale-105">
@@ -91,11 +90,10 @@ export default function Navbar({ isDark, setIsDark, onOpenResume }) {
                 <a
                   key={link.name}
                   href={link.href}
-                  className={`px-3 py-2 rounded-[5px] text-sm font-medium transition-all duration-200 relative focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:outline-none ${
-                    isActive
-                      ? 'text-blue-600 dark:text-cyan-400 font-semibold'
-                      : 'text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-cyan-400 hover:bg-slate-100/50 dark:hover:bg-slate-800/40'
-                  }`}
+                  className={`px-3 py-2 rounded-[5px] text-sm font-medium transition-all duration-200 relative focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:outline-none ${isActive
+                    ? 'text-blue-600 dark:text-cyan-400 font-semibold'
+                    : 'text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-cyan-400 hover:bg-slate-100/50 dark:hover:bg-slate-800/40'
+                    }`}
                 >
                   {link.name}
                   {isActive && (
@@ -157,11 +155,10 @@ export default function Navbar({ isDark, setIsDark, onOpenResume }) {
               key={link.name}
               href={link.href}
               onClick={() => setMobileMenuOpen(false)}
-              className={`block px-4 py-3 rounded-[5px] text-base font-medium transition-colors ${
-                activeSection === link.href.substring(1)
-                  ? 'bg-blue-600/10 text-blue-600 dark:text-cyan-400 font-semibold'
-                  : 'text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800'
-              }`}
+              className={`block px-4 py-3 rounded-[5px] text-base font-medium transition-colors ${activeSection === link.href.substring(1)
+                ? 'bg-blue-600/10 text-blue-600 dark:text-cyan-400 font-semibold'
+                : 'text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800'
+                }`}
             >
               {link.name}
             </a>

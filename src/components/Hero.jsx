@@ -10,7 +10,7 @@ const roles = [
   "WordPress & WooCommerce Developer"
 ];
 
-export default function Hero({ onOpenResume }) {
+export default function Hero() {
   const [roleIndex, setRoleIndex] = useState(0);
   const [currentText, setCurrentText] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);
@@ -47,11 +47,11 @@ export default function Hero({ onOpenResume }) {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
-          
+
           {/* Text Left Column */}
           <div className="lg:col-span-7 space-y-6 text-center lg:text-left">
             <ScrollReveal direction="up" delay={100}>
-              
+
               {/* Status Pill */}
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-[8px] glass-card border border-blue-500/30 text-blue-600 dark:text-cyan-400 text-xs font-semibold tracking-wide uppercase">
                 <span className="relative flex h-2.5 w-2.5">
@@ -69,7 +69,7 @@ export default function Hero({ onOpenResume }) {
                 <h1 className="text-4xl sm:text-6xl lg:text-6xl font-display font-extrabold tracking-tight text-slate-900 dark:text-white leading-[1.15]">
                   Hi, I'm <span className="text-gradient-primary">Bhupender Singh</span>
                 </h1>
-                
+
                 {/* Dynamic Typing Title */}
                 <div className="h-10 sm:h-12 flex items-center justify-center lg:justify-start">
                   <h2 className="text-xl sm:text-2xl lg:text-3xl font-semibold text-blue-600 dark:text-cyan-400 font-display">
@@ -138,12 +138,12 @@ export default function Hero({ onOpenResume }) {
             <ScrollReveal direction="left" delay={200}>
               {/* Outer Glow Ring */}
               <div className="relative w-72 h-72 sm:w-88 sm:h-88 lg:w-96 lg:h-96">
-                
+
                 <div className="absolute inset-0 rounded-[8px] bg-gradient-to-tr from-blue-600 via-purple-600 to-cyan-400 opacity-30 blur-2xl animate-pulse-glow" />
 
                 {/* Profile Card Container - 8px Border Radius */}
                 <div className="relative w-full h-full glass-card rounded-[8px] p-4 border border-white/20 dark:border-white/10 shadow-2xl flex flex-col justify-between overflow-hidden group">
-                  
+
                   {/* Header Mock Code Toolbar */}
                   <div className="flex items-center justify-between px-3 py-2 border-b border-slate-200 dark:border-slate-800/80 bg-slate-100/50 dark:bg-slate-900/50 rounded-[8px]">
                     <div className="flex items-center gap-1.5">

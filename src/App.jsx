@@ -10,12 +10,10 @@ import Portfolio from './components/Portfolio';
 import WhyHireMe from './components/WhyHireMe';
 import Testimonials from './components/Testimonials';
 import Contact from './components/Contact';
-import ResumeModal from './components/ResumeModal';
 import Footer from './components/Footer';
 
 export default function App() {
   const [isDark, setIsDark] = useState(true);
-  const [isResumeOpen, setIsResumeOpen] = useState(false);
 
   // Sync dark class on html root element
   useEffect(() => {
@@ -36,12 +34,11 @@ export default function App() {
       <Navbar
         isDark={isDark}
         setIsDark={setIsDark}
-        onOpenResume={() => setIsResumeOpen(true)}
       />
 
       {/* Main Content Sections */}
       <main className="relative z-10 space-y-4">
-        <Hero onOpenResume={() => setIsResumeOpen(true)} />
+        <Hero />
         <About />
         <Skills />
         <Services />
@@ -54,12 +51,6 @@ export default function App() {
 
       {/* Footer */}
       <Footer />
-
-      {/* Resume Viewer & Download Modal */}
-      <ResumeModal
-        isOpen={isResumeOpen}
-        onClose={() => setIsResumeOpen(false)}
-      />
     </div>
   );
 }

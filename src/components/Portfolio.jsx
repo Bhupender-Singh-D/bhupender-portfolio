@@ -73,16 +73,16 @@ const projectsData = [
     demoUrl: 'https://www.snsmeditech.com/',
     highlights: ['Product catalog categorization', 'Inquiry & RFQ submission flow', 'High-trust corporate design', 'Fully responsive mobile layout']
   },
-  {
-    id: 7,
-    title: 'Bhupender.dev — Portfolio Website',
-    category: 'React.js',
-    tech: ['React.js', 'Tailwind CSS', 'Vite', 'Canvas API'],
-    desc: 'State-of-the-art personal portfolio featuring smooth theme toggling, interactive canvas background, SEO schema markup, and responsive card layouts.',
-    imageBg: PortfolioPortfolio,
-    demoUrl: 'https://bhupender-portfolio.vercel.app',
-    highlights: ['Particle canvas background', 'Dark/Light mode persistence', 'Responsive UI components', 'Structured SEO schema markup']
-  },
+  // {
+  //   id: 7,
+  //   title: 'Bhupender.dev — Portfolio Website',
+  //   category: 'React.js',
+  //   tech: ['React.js', 'Tailwind CSS', 'Vite', 'Canvas API'],
+  //   desc: 'State-of-the-art personal portfolio featuring smooth theme toggling, interactive canvas background, SEO schema markup, and responsive card layouts.',
+  //   imageBg: PortfolioPortfolio,
+  //   demoUrl: 'https://bhupender-portfolio.vercel.app',
+  //   highlights: ['Particle canvas background', 'Dark/Light mode persistence', 'Responsive UI components', 'Structured SEO schema markup']
+  // },
   {
     id: 8,
     title: 'Insiders Health AI Analytics Dashboard',

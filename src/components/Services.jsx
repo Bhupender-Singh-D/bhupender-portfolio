@@ -51,12 +51,12 @@ const servicesList = [
     icon: Sparkles,
     color: 'from-pink-500 to-purple-600'
   },
-  {
-    title: 'Website Redesign',
-    desc: 'Revamping outdated websites into modern, sleek, fast-loading, and mobile-ready web platforms.',
-    icon: RefreshCw,
-    color: 'from-indigo-500 to-blue-600'
-  },
+  // {
+  //   title: 'Website Redesign',
+  //   desc: 'Revamping outdated websites into modern, sleek, fast-loading, and mobile-ready web platforms.',
+  //   icon: RefreshCw,
+  //   color: 'from-indigo-500 to-blue-600'
+  // },
   {
     title: 'Website Maintenance',
     desc: 'Regular updates, security checks, bug fixing, and continuous performance tuning for your website.',
@@ -69,7 +69,7 @@ export default function Services() {
   return (
     <section id="services" className="py-20 relative overflow-hidden bg-slate-100/50 dark:bg-slate-900/40">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        
+
         {/* Section Header */}
         <ScrollReveal direction="up">
           <div className="text-center max-w-3xl mx-auto space-y-3 mb-16">

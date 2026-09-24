@@ -9,6 +9,7 @@ import Experience from './components/Experience';
 import Portfolio from './components/Portfolio';
 import WhyHireMe from './components/WhyHireMe';
 import Testimonials from './components/Testimonials';
+import ResumeCTA from './components/ResumeCTA';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 
@@ -27,10 +28,10 @@ export default function App() {
 
   return (
     <div className="relative min-h-screen font-sans selection:bg-blue-600 selection:text-white transition-colors duration-300">
-      {/* Particle Canvas Background */}
+      {/* Dynamic Particle Canvas Background */}
       <ParticleBackground isDark={isDark} />
 
-      {/* Main Header / Navigation */}
+      {/* Main Sticky Navbar */}
       <Navbar
         isDark={isDark}
         setIsDark={setIsDark}
@@ -46,6 +47,7 @@ export default function App() {
         <Portfolio />
         <WhyHireMe />
         <Testimonials />
+        <ResumeCTA />
         <Contact />
       </main>
 

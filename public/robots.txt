@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://bhupendersingh.dev
+Host: https://bhupender-portfolio.vercel.app
 
 # Sitemap
-Sitemap: https://bhupendersingh.dev/sitemap.xml
+Sitemap: https://bhupender-portfolio.vercel.app/sitemap.xml

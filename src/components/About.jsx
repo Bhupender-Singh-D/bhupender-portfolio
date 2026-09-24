@@ -26,7 +26,7 @@ export default function About() {
       <div className="absolute bottom-0 right-10 w-96 h-96 bg-purple-500/10 dark:bg-purple-600/15 rounded-full blur-[140px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        
+
         {/* Section Header */}
         <ScrollReveal direction="up">
           <div className="text-center max-w-3xl mx-auto space-y-3 mb-16">
@@ -34,7 +34,7 @@ export default function About() {
               <User className="w-4 h-4" />
               <span>Discover My Story</span>
             </div>
-            
+
             <h2 className="text-3xl sm:text-5xl font-display font-extrabold text-slate-900 dark:text-white tracking-tight">
               About <span className="text-gradient-primary">Bhupender Singh</span>
             </h2>
@@ -48,7 +48,7 @@ export default function About() {
         </ScrollReveal>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          
+
           {/* Left Column: Detailed Bio & Quick Contact Cards */}
           <div className="lg:col-span-7 space-y-6">
             <ScrollReveal direction="right" delay={100}>
@@ -56,7 +56,7 @@ export default function About() {
                 <h3 className="text-2xl sm:text-3xl font-display font-bold text-slate-900 dark:text-white leading-tight">
                   Crafting Modern Interfaces with Technical Precision & Creative Flair
                 </h3>
-                
+
                 <p className="text-base text-slate-700 dark:text-slate-300 leading-relaxed">
                   I am a results-driven <strong className="text-slate-900 dark:text-white font-bold">Web Designer & Front-End Developer</strong> based in Sahibzada Ajit Singh Nagar (Mohali), Punjab with <strong className="text-blue-600 dark:text-cyan-400 font-bold">2.8+ years of experience</strong> working alongside digital agencies, software startups, and commercial clients.
                 </p>
@@ -168,13 +168,13 @@ export default function About() {
               return (
                 <ScrollReveal key={idx} direction="left" delay={150 + idx * 100}>
                   <TiltCard maxTilt={10} scale={1.03} glare={true} className="h-full">
-                    <div 
+                    <div
                       className="glass-card p-6 sm:p-7 rounded-2xl border border-slate-200/90 dark:border-slate-800 flex flex-col items-center text-center space-y-3.5 shadow-xl hover:shadow-2xl transition-all duration-300 bg-white/95 dark:bg-slate-900/80 backdrop-blur-xl h-full justify-between group"
                     >
                       <div className={`p-4 rounded-2xl bg-gradient-to-tr ${stat.color} text-white shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-300`}>
                         <Icon className="w-7 h-7" />
                       </div>
-                      
+
                       <div>
                         <span className="text-4xl sm:text-5xl font-display font-extrabold text-slate-900 dark:text-white tracking-tight block">
                           {stat.count}
